@@ -9,11 +9,7 @@ class Triangle
   
   def kind
     if x + y < z || y + z < x || x + z < y || x <= 0 || x == nil || y <=  0 || y == nil || z <=  0 || z == nil 
-      begin
         raise TriangleError
-      rescue TriangleError => error
-          puts error.message
-      end 
      elsif x == y && y == z && x == z
       :equilateral
     elsif (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
