@@ -13,7 +13,9 @@ class Triangle
         raise TriangleError
      elsif x == y && y == z && x == z
       :equilateral
-    elsif (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
+    elsif 
+      @sides[0] == @sides[1] && != @sides[2]
+    # (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
       :isosceles
     elsif x != y && y != z && x != z
       :scalene
