@@ -5,7 +5,7 @@ class Triangle
     @x = x 
     @y = y 
     @z = z
-    @sides = [x,y,z]
+    @sides = [x,y,z].sort 
   end 
   
   def kind
