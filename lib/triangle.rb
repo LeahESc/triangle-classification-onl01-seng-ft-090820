@@ -14,16 +14,18 @@ class Triangle
       rescue TriangleError => error
           puts error.message
       end 
-      x == y && y == z 
+     elsif x == y && y == z 
       :equilateral
     elsif x == y && x !=z 
       :isosceles
-      
+    else 
+      :scalene
   end 
   
   class TriangleError < StandardError
     def message 
       puts "That's no triangle!"
     end
+  end
 
 end
