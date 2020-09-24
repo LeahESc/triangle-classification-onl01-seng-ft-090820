@@ -7,7 +7,9 @@ class Triangle
   
   def kind
     @sides.sort 
-    if x + y < z || z + y < x || x + z < y || x <= 0 || x == nil || y <=  0 || y == nil || z <=  0 || z == nil 
+    if @sides[0] + @sides[1] <= @sides[2] || @sides.any? {|side| side <= 0}
+      
+      # x + y < z || z + y < x || x + z < y || x <= 0 || x == nil || y <=  0 || y == nil || z <=  0 || z == nil 
         raise TriangleError
      elsif x == y && y == z && x == z
       :equilateral
