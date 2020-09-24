@@ -6,7 +6,7 @@ class Triangle
   end 
   
   def kind
-    @sides.sort 
+     @sides.sort 
     if @sides[0] + @sides[1] <= @sides[2] || @sides.any? {|side| side <= 0}
       
       # x + y < z || z + y < x || x + z < y || x <= 0 || x == nil || y <=  0 || y == nil || z <=  0 || z == nil 
@@ -14,8 +14,8 @@ class Triangle
      elsif x == y && y == z && x == z
       :equilateral
     elsif 
-      (@sides[0] == @sides[1] && @sides[1] != @sides[2]) || (@sides[1] == @sides[2] && @sides[1] != @sides[0])
-    # (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
+      # (@sides[0] == @sides[1] && @sides[1] != @sides[2]) || (@sides[1] == @sides[2] && @sides[1] != @sides[0])
+    (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
       :isosceles
     elsif x != y && y != z && x != z
       :scalene
