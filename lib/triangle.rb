@@ -8,7 +8,7 @@ class Triangle
   end 
   
   def kind
-    if x
+    if x + y < z || y + z < x || x + z < y 
       x == y && y == z 
       :equilateral
     elsif x == y && x !=z 
