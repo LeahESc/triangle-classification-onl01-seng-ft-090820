@@ -9,6 +9,11 @@ class Triangle
   
   def kind
     if x + y < z || y + z < x || x + z < y 
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+          puts error.message
+      end 
       x == y && y == z 
       :equilateral
     elsif x == y && x !=z 
@@ -17,7 +22,8 @@ class Triangle
   end 
   
   class TriangleError < StandardError
-
+    def message 
+      puts "That's no triangle!"
     end
 
 end
