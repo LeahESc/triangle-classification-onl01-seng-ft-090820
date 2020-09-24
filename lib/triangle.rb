@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :x, :y, :z, :equilateral, :isosceles, :scalene
+  attr_accessor :x, :y, :z, :equilateral, :isosceles, :scalene, :sides 
   
   def initialize(x, y, z)
     @sides = [x,y,z]
