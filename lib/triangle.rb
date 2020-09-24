@@ -1,13 +1,16 @@
 class Triangle
-  attr_accessor :length_one, :length_two, :length_three 
+  attr_accessor :x, :y, :z, :equilateral, :isosceles, :scalene
   
-  def initialize(length_one, length_two, length_three)
-    @length_one = length_one 
-    @length_two = length_two 
-    @length_three = length_three 
+  def initialize(x, y, z)
+    @x = x 
+    @y = y 
+    @z = z 
   end 
   
   def kind
+    if x == y && y == z 
+      :equilateral
+    elsif x
   end 
   
   class TriangleError < StandardError
