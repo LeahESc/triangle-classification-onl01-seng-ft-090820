@@ -14,7 +14,7 @@ class Triangle
       rescue TriangleError => error
           puts error.message
       end 
-     elsif x == y == z 
+     elsif x == y && y == z && x == z
       :equilateral
     elsif x == y || y == z || x == z 
       :isosceles
