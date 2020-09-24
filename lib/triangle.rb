@@ -12,7 +12,7 @@ class Triangle
     # if @sides.any? {|s| s <= 0} or
     #   @sides[0]+ @sides[1] <= @sides[2]@sides[0] + @sides[1] <= @sides[2] || @sides.any? {|side| side <= 0}
    raise TriangleError if   x + y < z || z + y < x || x + z < y || x <= 0 || x == nil || y <=  0 || y == nil || z <=  0 || z == nil 
-        raise TriangleError
+        # raise TriangleError
      elsif x == y && y == z && x == z
       :equilateral
     elsif 
