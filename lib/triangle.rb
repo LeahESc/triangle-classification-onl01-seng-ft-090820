@@ -14,7 +14,7 @@ class Triangle
      elsif x == y && y == z && x == z
       :equilateral
     elsif 
-      @sides[0] == @sides[1] && @sides[1] != @sides[2]
+      (@sides[0] == @sides[1] && @sides[1] != @sides[2]) || (@sides[1] == @sides[2] && @sides[1] != @sides[0])
     # (x == y && x !=z) || (y == z && x != z) || (z == x && x != y)
       :isosceles
     elsif x != y && y != z && x != z
